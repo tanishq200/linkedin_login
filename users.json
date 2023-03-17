@@ -1,0 +1,24 @@
+// Get the login form element
+const loginForm = document.querySelector('form');
+
+// Add a submit event listener to the form
+loginForm.addEventListener('submit', (event) => {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the username and password input fields
+  const usernameInput = loginForm.elements['username'];
+  const passwordInput = loginForm.elements['password'];
+
+  // Get the username and password values
+  const username = usernameInput.value;
+  const password = passwordInput.value;
+
+  // Log the username and password values to the console
+  console.log('Username:', username);
+  console.log('Password:', password);
+
+  // Clear the input fields
+  usernameInput.value = '';
+  passwordInput.value = '';
+});
